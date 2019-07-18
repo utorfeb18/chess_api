@@ -5,4 +5,6 @@ class Game < ApplicationRecord
 
   has_many :moves
 
+  has_one :board
+
 end
