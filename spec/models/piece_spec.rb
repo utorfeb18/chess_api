@@ -6,8 +6,8 @@ RSpec.describe Piece, type: :model do
     expect(defined? Piece).to eq("constant")
   end
 
-
-  it "has 32 records" do
+  it "has 32 records from seed data load" do
     expect(Piece.count).to eq(32)
   end
+
 end
