@@ -17,6 +17,13 @@ RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
+
+  # load seed data in to test environment
+  config.before(:suite) do
+    Piece.delete_all  # make sure its empty before adding seed data otherwise it gets duplicated
+    Rails.application.load_seed # loading seeds
+  end
+
   config.expect_with :rspec do |expectations|
     # This option will default to `true` in RSpec 4. It makes the `description`
     # and `failure_message` of custom matchers include text for helper methods
