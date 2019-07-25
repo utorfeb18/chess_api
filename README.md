@@ -88,11 +88,12 @@ $ gem install rails
     bundle install
     ```
 
-6.  Create and update the database schema
+6.  Create and update the database schema and add seed data
 
     ```
     rake db:create
     rake db:migrate
+    rake db:seed
     ```
     
 7.  Run the test suite:
